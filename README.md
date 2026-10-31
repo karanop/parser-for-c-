@@ -1,4 +1,4 @@
-# Local C# Playground and AST Workbench
+# parser-for-c- — Local C# Playground and AST Workbench
 
 A local React/TypeScript playground for writing C#, executing it with the installed .NET compiler, viewing a full Roslyn syntax tree, or exploring a smaller teaching grammar with the project's recursive-descent parser. The frontend connects only to an ASP.NET Core API bound to loopback.
 
