@@ -1,0 +1,32 @@
+namespace SimpleParser;
+
+public abstract record Expr;
+public sealed record IntegerExpr(int Value) : Expr;
+public sealed record DecimalExpr(decimal Value) : Expr;
+public sealed record StringExpr(string Value) : Expr;
+public sealed record CharacterExpr(char Value) : Expr;
+public sealed record BooleanExpr(bool Value) : Expr;
+public sealed record IdentifierExpr(string Name) : Expr;
+public sealed record ArrayInitializerExpr(IReadOnlyList<Expr> Items) : Expr;
+public sealed record CallExpr(Expr Callee, IReadOnlyList<Expr> Arguments) : Expr;
+public sealed record UnaryExpr(TokenKind Operator, Expr Operand, bool IsPostfix = false) : Expr;
+public sealed record BinaryExpr(Expr Left, TokenKind Operator, Expr Right) : Expr;
+
+public abstract record Stmt;
+public sealed record ProgramNode(IReadOnlyList<Stmt> Statements);
+public sealed record VariableDeclarationStmt(string TypeName, string Name, Expr Initializer) : Stmt;
+public sealed record AssignmentStmt(string Name, Expr Value) : Stmt;
+public sealed record ExpressionStmt(Expr Expression) : Stmt;
+public sealed record PrintStmt(Expr Expression) : Stmt;
+public sealed record IfStmt(Expr Condition, Stmt ThenBranch, Stmt? ElseBranch) : Stmt;
+public sealed record BlockStmt(IReadOnlyList<Stmt> Statements) : Stmt;
+public sealed record ForStmt(Stmt? Initializer, Expr? Condition, Expr? Increment, Stmt Body) : Stmt;
+public sealed record WhileStmt(Expr Condition, Stmt Body) : Stmt;
+public sealed record DoWhileStmt(Stmt Body, Expr Condition) : Stmt;
+public sealed record ForeachStmt(string TypeName, string Name, Expr Collection, Stmt Body) : Stmt;
+public sealed record BreakStmt : Stmt;
+public sealed record ContinueStmt : Stmt;
+public sealed record ReturnStmt(Expr? Expression) : Stmt;
+public sealed record SwitchStmt(Expr Expression, IReadOnlyList<SwitchSection> Sections) : Stmt;
+public sealed record SwitchSection(IReadOnlyList<SwitchLabel> Labels, IReadOnlyList<Stmt> Statements);
+public sealed record SwitchLabel(Expr? Value, bool IsDefault);

@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleParser", "src\SimpleParser\SimpleParser.csproj", "{76B3B3B1-7290-4F2B-BE83-32046E677A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleParser.Tests", "tests\SimpleParser.Tests\SimpleParser.Tests.csproj", "{49D627F1-9B96-447B-9D53-532FD847E7A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{B33A6C55-9E4A-4BD6-B405-4EE47C6B83E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser.Api", "backend\Parser.Api\Parser.Api.csproj", "{D6576E22-838F-4CD0-BEDE-F1072F0298D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76B3B3B1-7290-4F2B-BE83-32046E677A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B3B3B1-7290-4F2B-BE83-32046E677A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B3B3B1-7290-4F2B-BE83-32046E677A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B3B3B1-7290-4F2B-BE83-32046E677A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D627F1-9B96-447B-9D53-532FD847E7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D627F1-9B96-447B-9D53-532FD847E7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D627F1-9B96-447B-9D53-532FD847E7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D627F1-9B96-447B-9D53-532FD847E7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6576E22-838F-4CD0-BEDE-F1072F0298D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6576E22-838F-4CD0-BEDE-F1072F0298D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6576E22-838F-4CD0-BEDE-F1072F0298D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6576E22-838F-4CD0-BEDE-F1072F0298D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6576E22-838F-4CD0-BEDE-F1072F0298D8} = {B33A6C55-9E4A-4BD6-B405-4EE47C6B83E0}
+	EndGlobalSection
+EndGlobal

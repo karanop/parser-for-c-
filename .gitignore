@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+frontend/dist/
+frontend/node_modules/
+frontend/tsconfig.tsbuildinfo

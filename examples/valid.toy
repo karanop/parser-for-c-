@@ -1,0 +1,11 @@
+// Arithmetic, comparisons, booleans, and control flow
+int x = 10;
+int y = 20;
+bool shouldPrint = x < y && true;
+
+if (shouldPrint) {
+    x = (x + y) * 2;
+    print(x);
+} else {
+    print(0);
+}

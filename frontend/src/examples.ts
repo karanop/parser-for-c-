@@ -1,0 +1,21 @@
+export interface Example { name: string; code: string; }
+export const examples: Example[] = [
+  { name: 'Hello World', code: 'Console.WriteLine("Hello, World!");' },
+  { name: 'Arithmetic', code: 'int a = 2;\nint b = 3;\nConsole.WriteLine(a + b * 4);' },
+  { name: 'If / else', code: 'int score = 85;\nif (score >= 50)\n{\n    Console.WriteLine("Pass");\n}\nelse\n{\n    Console.WriteLine("Fail");\n}' },
+  { name: 'For loop', code: 'for (int i = 0; i < 5; i++)\n{\n    Console.WriteLine(i);\n}' },
+  { name: 'While loop', code: 'int i = 0;\nwhile (i < 3)\n{\n    Console.WriteLine(i);\n    i++;\n}' },
+  { name: 'Do while', code: 'int i = 0;\ndo\n{\n    Console.WriteLine(i);\n    i++;\n}\nwhile (i < 3);' },
+  { name: 'Foreach array', code: 'int[] values = { 1, 2, 3 };\nforeach (int value in values)\n{\n    Console.WriteLine(value);\n}' },
+  { name: 'Nested loops', code: 'for (int row = 1; row <= 3; row++)\n{\n    for (int col = 1; col <= 2; col++)\n        Console.WriteLine($"{row},{col}");\n}' },
+  { name: 'Method', code: 'static int Add(int a, int b) => a + b;\nConsole.WriteLine(Add(10, 20));' },
+  { name: 'Recursion', code: 'static int Factorial(int n) => n <= 1 ? 1 : n * Factorial(n - 1);\nConsole.WriteLine(Factorial(5));' },
+  { name: 'Collections and LINQ', code: 'using System.Linq;\nvar values = new List<int> { 1, 2, 3, 4, 5 };\nConsole.WriteLine(string.Join(",", values.Where(x => x % 2 == 1)));' },
+  { name: 'Class and object', code: 'var person = new Person("Karan");\nperson.Greet();\n\nclass Person(string name)\n{\n    public void Greet() => Console.WriteLine($"Hello, {name}");\n}' },
+  { name: 'Switch', code: 'int day = 3;\nswitch (day)\n{\n    case 1: Console.WriteLine("Mon"); break;\n    case 3: Console.WriteLine("Wed"); break;\n    default: Console.WriteLine("Other"); break;\n}' },
+  { name: 'Exception handling', code: 'try\n{\n    throw new InvalidOperationException("demo");\n}\ncatch (InvalidOperationException ex)\n{\n    Console.WriteLine(ex.Message);\n}' },
+  { name: 'Compile error', code: 'int total = ;\nConsole.WriteLine(total);' },
+  { name: 'Runtime exception', code: 'int zero = 0;\nConsole.WriteLine(10 / zero);' },
+  { name: 'Timeout demo', code: 'while (true) { }' },
+  { name: 'Educational parser', code: 'int x = 10;\nint y = 20;\nif (x < y && true) {\n    print(x + y * 2);\n} else {\n    print(0);\n}' },
+];
